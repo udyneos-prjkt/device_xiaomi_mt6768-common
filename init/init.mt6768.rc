@@ -1087,3 +1087,10 @@ on property:sys.boot_completed=1
 # Restart C2 service
 on property:sys.boot_completed=1
     restart android-hardware-media-c2-hal-1-2
+    
+    # Report max frequency to unity tasks
+    write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so" 
+    write /proc/sys/kernel/sched_lib_mask_force 255
+
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"

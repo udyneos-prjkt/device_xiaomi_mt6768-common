@@ -35,7 +35,9 @@ ro.charger.enable_suspend=true
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.dex2oat-cpu-set=4,5,6,7
 dalvik.vm.dex2oat-threads=4
+dalvik.vm.dex2oat-filter=speed-profile
 dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
+dalvik.vm.image-dex2oat-filter=speed-profile
 dalvik.vm.image-dex2oat-threads=4
 dalvik.vm.heapgrowthlimit=192m
 dalvik.vm.heapmaxfree=16m
@@ -89,6 +91,14 @@ ro.mtk_perf_response_time=1
 vendor.rild.libpath=mtk-ril.so
 vendor.rild.libargs=-d /dev/ttyC0
 ro.telephony.sim.count=2
+
+# RIL Powersaving
+persist.radio.add_power_save=1
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.fast.dormancy.rule=1
+ro.ril.fast.dormancy.timeout=3
+ro.mot.eri.losalert.delay=1000
 
 # TEE
 ro.mtk_key_manager_support=1
