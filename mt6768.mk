@@ -36,6 +36,9 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     tinymix \
     libldacBT_bco
+    
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 PRODUCT_PACKAGES += \
     MtkInCallService
@@ -299,6 +302,11 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlayMT6768 \
     WifiOverlayMT6768
 
+# Preopt critical applications
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr
@@ -450,6 +458,11 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 # Use FUSE passthrough
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
+    
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := everything
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/mt6768-common/mt6768-common-vendor.mk)
+
+# ViperFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)

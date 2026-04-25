@@ -24,6 +24,9 @@ vendor.camera.aux.packagelist=org.lineageos.aperture,org.lineageos.aperture.dev
 
 # Media
 debug.stagefright.c2inputsurface=-1
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=0
+media.c2.hal.selection=aidl
 
 # Charger
 ro.charger.enable_suspend=true
@@ -32,7 +35,9 @@ ro.charger.enable_suspend=true
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.dex2oat-cpu-set=4,5,6,7
 dalvik.vm.dex2oat-threads=4
+dalvik.vm.dex2oat-filter=speed-profile
 dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
+dalvik.vm.image-dex2oat-filter=speed-profile
 dalvik.vm.image-dex2oat-threads=4
 dalvik.vm.heapgrowthlimit=192m
 dalvik.vm.heapmaxfree=16m
@@ -49,6 +54,7 @@ debug.hwui.trace_gpu_resources=false
 config.svi.xml=1
 config.svi.xml.print=1
 persist.sys.brightness.low.gamma=true
+debug.egl.hw=0
 
 # FM Radio
 persist.sys.radio.force_lte_ca=true
@@ -82,10 +88,22 @@ ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
 
+# Surfaceflinger
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+debug.sf.triple_buffer=1
+
 # RIL
 vendor.rild.libpath=mtk-ril.so
 vendor.rild.libargs=-d /dev/ttyC0
 ro.telephony.sim.count=2
+
+# RIL Powersaving
+persist.radio.add_power_save=1
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.fast.dormancy.rule=1
+ro.ril.fast.dormancy.timeout=3
+ro.mot.eri.losalert.delay=1000
 
 # TEE
 ro.mtk_key_manager_support=1
