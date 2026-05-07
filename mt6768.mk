@@ -512,5 +512,8 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
 
+# IMS    
+$(call inherit-product, vendor/mediatek/ims/ims.mk)
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/mt6768-common/mt6768-common-vendor.mk)
