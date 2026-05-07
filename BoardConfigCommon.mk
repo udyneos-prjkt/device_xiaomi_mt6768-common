@@ -150,7 +150,7 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 # SPL
-VENDOR_SECURITY_PATCH := 2026-03-01
+VENDOR_SECURITY_PATCH := 2026-04-01
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -186,8 +186,8 @@ endif
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 
 # VINTF
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest.xml
-DEVICE_MATRIX_FILE += $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
 $(COMMON_PATH)/configs/vintf/framework_compatibility_matrix.xml

@@ -290,5 +290,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.MDP=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.Profiler=$(VENDOR_LOG_LEVEL) \
     persist.log.tag.GPUAUX=$(VENDOR_LOG_LEVEL) \
-    persist.log.tag.FrameTracker=$(VENDOR_LOG_LEVEL)
+    persist.log.tag.FrameTracker=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.Scheduler=$(VENDOR_LOG_LEVEL) \
+    persist.log.tag.powerhal-libperfmgr=$(VENDOR_LOG_LEVEL)
 

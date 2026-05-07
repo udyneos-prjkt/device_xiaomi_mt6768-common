@@ -19,8 +19,12 @@ ro.fm.fake_chan_3=10750 -205
 ro.bpf.kver_override=5.10.247
 
 # Low memory killer daemon
-ro.lmk.kill_heaviest_task=true
-ro.lmk.thrashing_limit=50
-ro.lmk.thrashing_limit_decay=25
-ro.lmk.psi_complete_stall_ms=80
-ro.lmk.psi_partial_stall_ms=50
+ro.config.low_ram=false
+ro.lmk.critical_upgrade=false
+ro.lmk.upgrade_pressure=70
+ro.lmk.downgrade_pressure=85
+ro.lmk.kill_heaviest_task=false
+ro.lmk.thrashing_limit=65
+ro.lmk.thrashing_limit_decay=15
+ro.lmk.psi_complete_stall_ms=150
+ro.lmk.psi_partial_stall_ms=100

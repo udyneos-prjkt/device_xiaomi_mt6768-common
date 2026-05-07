@@ -46,11 +46,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MtkInCallService
 
-
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
     $(COMMON_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
