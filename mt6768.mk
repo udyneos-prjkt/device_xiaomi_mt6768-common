@@ -512,6 +512,17 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
 
+# Remove problematic MediaTek packages
+PRODUCT_PACKAGES := $(filter-out \
+    android.hardware.memtrack-service.mediatek-mali \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common \
+    , $(PRODUCT_PACKAGES))
+
 # IMS    
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
